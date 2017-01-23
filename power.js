@@ -19,3 +19,19 @@ function power(mtrx,p){
 //testing code
 let B = power(A,10);
 console.log(power(A,10));
+
+
+function powerE(mtrx,p){
+  let before=mtrx;
+  if(p%2==0){
+    let half = powerE(mtrx,p/2);
+    return
+  }
+  else if(p%2==1){
+    let bighalf = Math.ceil(powerE(mtrx,p/2));
+    let smallhalf = Math.floor(powerE(mtrx,p/2));
+  }
+  else{
+    return A
+  }
+}
